@@ -4,17 +4,17 @@
 	unconditionally for ELF64 - some platforms use
 	64 bit DT_HASH entries.
 
---- libelf-0.7.0/lib/update.c.jj	Fri Jun 12 15:42:39 1998
-+++ libelf-0.7.0/lib/update.c	Fri Jun 14 10:22:19 2002
-@@ -317,7 +317,10 @@ _elf64_layout(Elf *elf, unsigned *flag) 
- 
- 	entsize = scn_entsize(elf, version, shdr->sh_type);
- 	if (entsize > 1) {
--	    rewrite(shdr->sh_entsize, entsize, scn->s_shdr_flags);
-+	    /* Some architectures use 64-bit hash entries.  */
-+	    if (shdr->sh_type != SHT_HASH
-+		|| shdr->sh_entsize != _fsize(elf->e_class, version, ELF_T_ADDR))
-+		rewrite(shdr->sh_entsize, entsize, scn->s_shdr_flags);
+--- libelf-0.8.13/lib/update.c.orig	2013-03-26 17:10:01.534549234 +0100
++++ libelf-0.8.13/lib/update.c	2013-03-26 17:12:06.191210669 +0100
+@@ -224,7 +224,10 @@ _elf64_layout(Elf *elf, unsigned *flag) 
+ 	if (shdr->sh_entsize == 0) {
+ 	    entsize = scn_entsize(elf, version, shdr->sh_type);
+ 	    if (entsize > 1) {
+-		rewrite(shdr->sh_entsize, entsize, scn->s_shdr_flags);
++		/* Some architectures use 64-bit hash entries.  */
++		if (shdr->sh_type != SHT_HASH
++		    || shdr->sh_entsize != _fsize(elf->e_class, version, ELF_T_ADDR))
++		    rewrite(shdr->sh_entsize, entsize, scn->s_shdr_flags);
+ 	    }
  	}
  
- 	if (layout) {

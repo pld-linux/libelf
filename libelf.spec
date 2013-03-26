@@ -1,3 +1,4 @@
+# NOTE: PLD uses elfutils currently
 Summary:	ELF object file access library
 Summary(de):	Objektdateizugriffs-Library ELF
 Summary(pt_BR):	Biblioteca para acesso a arquivos objeto ELF
@@ -9,19 +10,18 @@ Summary(ru):	âÉÂĚÉĎÔĹËÁ ÄĎÓÔŐĐÁ Ë ĎÂßĹËÔÎŮÍ ĆÁĘĚ�
 Summary(tr):	ELF ara kod eriţim kitaplýđý
 Summary(uk):	âŚÂĚŚĎÔĹËÁ ÄĎÓÔŐĐŐ ÄĎ ĎÂ'¤ËÔÎÉČ ĆÁĘĚŚ× ĆĎŇÍÁÔŐ ELF
 Name:		libelf
-Version:	0.8.2
-Release:	4
-License:	LGPL
+Version:	0.8.13
+Release:	0.1
+License:	LGPL v2+
 Group:		Libraries
-Source0:	http://www.stud.uni-hannover.de/~michael/software/%{name}-%{version}.tar.gz
-Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-hash.patch
-Patch2:		%{name}-symver.patch
-URL:		http://www.stud.uni-hannover.de/~michael/software/
-BuildRequires:	autoconf
+Source0:	http://www.mr511.de/software/%{name}-%{version}.tar.gz
+# Source0-md5:	4136d7b4c04df68b686570afa26988ac
+Patch0:		%{name}-hash.patch
+URL:		http://www.mr511.de/software/english.html
+BuildRequires:	autoconf >= 2.13
 BuildRequires:	automake
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libelf0
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The libelf package contains a library for accessing ELF object files.
@@ -79,7 +79,7 @@ Summary(pl):	Pliki dla programistów libelf
 Summary(ru):	ćÁĘĚŮ ÄĚŃ ŇÁÚŇÁÂĎÔËÉ Ó ÉÓĐĎĚŘÚĎ×ÁÎÉĹÍ ÂÉÂĚÉĎÔĹËÉ libelf
 Summary(uk):	ćÁĘĚÉ ÄĚŃ ŇĎÚŇĎÂËÉ Ú ×ÉËĎŇÉÓÔÁÎÎŃÍ ÂŚÂĚŚĎÔĹËÉ libelf
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Obsoletes:	libelf0-devel
 
 %description devel
@@ -102,7 +102,7 @@ Summary(pl):	Statyczna biblioteka libelf
 Summary(ru):	óÔÁÔÉŢĹÓËÉĹ ÂÉÂĚÉĎÔĹËÉ ÄĚŃ ŇÁÚŇÁÂĎÔËÉ Ó ÉÓĐĎĚŘÚĎ×ÁÎÉĹÍ libelf
 Summary(uk):	óÔÁÔÉŢÎŚ ÂŚÂĚŚĎÔĹËÉ ÄĚŃ ŇĎÚŇĎÂËÉ Ú ×ÉËĎŇÉÓÔÁÎÎŃÍ libelf
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libelf library.
@@ -119,8 +119,6 @@ Statyczna biblioteka libelf.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 install -m755 /usr/share/automake/config.{sub,guess} .
@@ -134,7 +132,7 @@ install -m755 /usr/share/automake/config.{sub,guess} .
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	instroot=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
@@ -146,13 +144,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%doc ChangeLog README
+%attr(755,root,root) %{_libdir}/libelf.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libelf.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%doc README
-%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/libelf.so
 %{_includedir}/libelf
+%{_pkgconfigdir}/libelf.pc
 
 %files static
 %defattr(644,root,root,755)
