@@ -1,14 +1,14 @@
 # NOTE: PLD uses elfutils currently
 Summary:	ELF object file access library
-Summary(de):	Objektdateizugriffs-Library ELF
-Summary(pt_BR):	Biblioteca para acesso a arquivos objeto ELF
-Summary(es):	Biblioteca para acceso a archivos objeto ELF
-Summary(fr):	Bibliothčque de gestion de fichiers ELF
-Summary(pl):	Biblioteka dostępu do plików ELF
-Summary(pt_BR):	Biblioteca para acesso a arquivos objeto ELF
-Summary(ru):	âÉÂĚÉĎÔĹËÁ ÄĎÓÔŐĐÁ Ë ĎÂßĹËÔÎŮÍ ĆÁĘĚÁÍ × ĆĎŇÍÁÔĹ ELF
-Summary(tr):	ELF ara kod eriţim kitaplýđý
-Summary(uk):	âŚÂĚŚĎÔĹËÁ ÄĎÓÔŐĐŐ ÄĎ ĎÂ'¤ËÔÎÉČ ĆÁĘĚŚ× ĆĎŇÍÁÔŐ ELF
+Summary(de.UTF-8):	Objektdateizugriffs-Library ELF
+Summary(pt_BR.UTF-8):	Biblioteca para acesso a arquivos objeto ELF
+Summary(es.UTF-8):	Biblioteca para acceso a archivos objeto ELF
+Summary(fr.UTF-8):	Bibliothèque de gestion de fichiers ELF
+Summary(pl.UTF-8):	Biblioteka dostępu do plików ELF
+Summary(pt_BR.UTF-8):	Biblioteca para acesso a arquivos objeto ELF
+Summary(ru.UTF-8):	Библиотека доступа к объектным файлам в формате ELF
+Summary(tr.UTF-8):	ELF ara kod erişim kitaplığı
+Summary(uk.UTF-8):	Бібліотека доступу до об'єктних файлів формату ELF
 Name:		libelf
 Version:	0.8.13
 Release:	0.1
@@ -28,56 +28,56 @@ The libelf package contains a library for accessing ELF object files.
 Libelf allows you to access the internals of the ELF object file
 format, so you can see the different sections of an ELF file.
 
-%description -l de
+%description -l de.UTF-8
 Diese Library gibt Ihnen Zugang zum Inneren des ELF-Objekt-
 Dateiformats. Sie können damit in den verschiedenen Teilen einer
 ELF-Datei umherstochern, die Symbole überprüfen und ähnliches.
 
-%description -l es
+%description -l es.UTF-8
 Esta biblioteca ofrece acceso a datos internos del formato de archivo
 objeto ELF. Permite visualizar varias secciones diferentes de un
 archivo ELF, observar los símbolos, etc.
 
-%description -l fr
-La bibliothčque libelf permet de manipuler des fichiers ELF (format de
-programmes exécutables communs ŕ plusieurs Unix dont Linux) et leurs
+%description -l fr.UTF-8
+La bibliothèque libelf permet de manipuler des fichiers ELF (format de
+programmes exécutables communs à plusieurs Unix dont Linux) et leurs
 différentes sections.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka elf umożliwia dostęp do struktury wewnętrznej plików w
 formacie ELF. Udostępnia ona funkcje do przeglądania poszczególnych
 części ELF-a, a także sprawdzanie symboli itp.
 
-%description -l pt_BR
+%description -l pt_BR.UTF-8
 Esta biblioteca fornece acesso a dados internos do formato de arquivo
-objeto ELF. Ele permite visualizar várias seçőes diferentes de um
+objeto ELF. Ele permite visualizar várias seções diferentes de um
 arquivo ELF, observar os símbolos, etc.
 
-%description -l uk
-ăŃ ÂŚÂĚŚĎÔĹËÁ ÎÁÄÁ¤ ÄĎÓÔŐĐ ÄĎ ×ÎŐÔŇŚŰÎŘĎ§ ÓÔŇŐËÔŐŇÉ ĎÂ'¤ËÔÎÉČ ĆÁĘĚŚ×
-ĆĎŇÍÁÔŐ ELF. ÷ĎÎÁ ÄĎÚ×ĎĚŃ¤ ×É×ŢÁÔÉ ŇŚÚÎŚ ÓĹËĂŚ§ ELF-ĆÁĘĚŐ, ĐĹŇĹ×ŚŇŃÔÉ
-ÓÉÍ×ĎĚÉ Ś Ô.Đ.
+%description -l uk.UTF-8
+Ця бібліотека надає доступ до внутрішньої структури об'єктних файлів
+формату ELF. Вона дозволяє вивчати різні секції ELF-файлу, перевіряти
+символи і т.п.
 
-%description -l ru
-üÔÁ ÂÉÂĚÉĎÔĹËÁ ĐŇĹÄĎÓÔÁ×ĚŃĹÔ ÄĎÓÔŐĐ Ë ×ÎŐÔŇĹÎÎĎÓÔŃÍ ĎÂßĹËÔÎŮČ ĆÁĘĚĎ× ×
-ĆĎŇÍÁÔĹ ELF. ďÎÁ ĐĎÚ×ĎĚŃĹÔ ÉÚŐŢÁÔŘ ŇÁÚĚÉŢÎŮĹ ÓĹËĂÉÉ ELF-ĆÁĘĚÁ,
-ĐŇĎ×ĹŇŃÔŘ ÓÉÍ×ĎĚŮ É Ô.Ä.
+%description -l ru.UTF-8
+Эта библиотека предоставляет доступ к внутренностям объектных файлов в
+формате ELF. Она позволяет изучать различные секции ELF-файла,
+проверять символы и т.д.
 
-%description -l tr
-Bu kitaplýk, ELF ara kod dosyasý içeriđine eriţimi sađlar. ELF
-dosyalarýnýn çeţitli yerleri ile oynama, sembolleri kontrol etme gibi
+%description -l tr.UTF-8
+Bu kitaplık, ELF ara kod dosyası içeriğine erişimi sağlar. ELF
+dosyalarının çeşitli yerleri ile oynama, sembolleri kontrol etme gibi
 olanaklar sunar.
 
-%description -l uk
-ăŃ ÂŚÂĚŚĎÔĹËÁ ÎÁÄÁ¤ ÄĎÓÔŐĐ ÄĎ ×ÎŐÔŇŚŰÎŘĎ§ ÓÔŇŐËÔŐŇÉ ĎÂ'¤ËÔÎÉČ ĆÁĘĚŚ×
-ĆĎŇÍÁÔŐ ELF. ÷ĎÎÁ ÄĎÚ×ĎĚŃ¤ ×É×ŢÁÔÉ ŇŚÚÎŚ ÓĹËĂŚ§ ELF-ĆÁĘĚŐ, ĐĹŇĹ×ŚŇŃÔÉ
-ÓÉÍ×ĎĚÉ Ś Ô.Đ.
+%description -l uk.UTF-8
+Ця бібліотека надає доступ до внутрішньої структури об'єктних файлів
+формату ELF. Вона дозволяє вивчати різні секції ELF-файлу, перевіряти
+символи і т.п.
 
 %package devel
 Summary:	Development files for libelf
-Summary(pl):	Pliki dla programistów libelf
-Summary(ru):	ćÁĘĚŮ ÄĚŃ ŇÁÚŇÁÂĎÔËÉ Ó ÉÓĐĎĚŘÚĎ×ÁÎÉĹÍ ÂÉÂĚÉĎÔĹËÉ libelf
-Summary(uk):	ćÁĘĚÉ ÄĚŃ ŇĎÚŇĎÂËÉ Ú ×ÉËĎŇÉÓÔÁÎÎŃÍ ÂŚÂĚŚĎÔĹËÉ libelf
+Summary(pl.UTF-8):	Pliki dla programistów libelf
+Summary(ru.UTF-8):	Файлы для разработки с использованием библиотеки libelf
+Summary(uk.UTF-8):	Файли для розробки з використанням бібліотеки libelf
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	libelf0-devel
@@ -85,36 +85,36 @@ Obsoletes:	libelf0-devel
 %description devel
 Development files for libelf.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki dla programistów tworzących programy używające libelf.
 
-%description devel -l ru
-üÔĎÔ ĐÁËĹÔ ÓĎÄĹŇÖÉÔ ĆÁĘĚŮ, ÎĹĎÂČĎÄÉÍŮĹ ÄĚŃ ŇÁÚŇÁÂĎÔËÉ ĐŇĎÇŇÁÍÍ Ó
-ÉÓĐĎĚŘÚĎ×ÁÎÉĹÍ ÂÉÂĚÉĎÔĹËÉ libelf.
+%description devel -l ru.UTF-8
+Этот пакет содержит файлы, необходимые для разработки программ с
+использованием библиотеки libelf.
 
-%description devel -l uk
-ăĹĘ ĐÁËĹÔ ÍŚÓÔÉÔŘ ĆÁĘĚÉ, ÎĹĎÂČŚÄÎŚ ÄĚŃ ŇĎÚŇĎÂËÉ ĐŇĎÇŇÁÍ Ú
-×ÉËĎŇÉÓÔÁÎÎŃÍ ÂŚÂĚŚĎÔĹËÉ libelf.
+%description devel -l uk.UTF-8
+Цей пакет містить файли, необхідні для розробки програм з
+використанням бібліотеки libelf.
 
 %package static
 Summary:	Static libelf library
-Summary(pl):	Statyczna biblioteka libelf
-Summary(ru):	óÔÁÔÉŢĹÓËÉĹ ÂÉÂĚÉĎÔĹËÉ ÄĚŃ ŇÁÚŇÁÂĎÔËÉ Ó ÉÓĐĎĚŘÚĎ×ÁÎÉĹÍ libelf
-Summary(uk):	óÔÁÔÉŢÎŚ ÂŚÂĚŚĎÔĹËÉ ÄĚŃ ŇĎÚŇĎÂËÉ Ú ×ÉËĎŇÉÓÔÁÎÎŃÍ libelf
+Summary(pl.UTF-8):	Statyczna biblioteka libelf
+Summary(ru.UTF-8):	Статические библиотеки для разработки с использованием libelf
+Summary(uk.UTF-8):	Статичні бібліотеки для розробки з використанням libelf
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libelf library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libelf.
 
-%description static -l ru
-üÔĎÔ ĐÁËĹÔ ÓĎÄĹŇÖÉÔ ÓÔÁÔÉŢĹÓËÉĹ ÂÉÂĚÉĎÔĹËÉ ÄĚŃ ŇÁÚŇÁÂĎÔËÉ ĐŇĎÇŇÁÍÍ.
+%description static -l ru.UTF-8
+Этот пакет содержит статические библиотеки для разработки программ.
 
-%description static -l uk
-ăĹĘ ĐÁËĹÔ ÍŚÓÔÉÔŘ ÓÔÁÔÉŢÎŚ ÂŚÂŚĚŚĎÔĹËÉ ÄĚŃ ŇĎÚŇĎÂËÉ ĐŇĎÇŇÁÍ.
+%description static -l uk.UTF-8
+Цей пакет містить статичні бібіліотеки для розробки програм.
 
 %prep
 %setup -q
