@@ -20,7 +20,7 @@ Patch0:		%{name}-hash.patch
 URL:		http://www.mr511.de/software/english.html
 BuildRequires:	autoconf >= 2.13
 BuildRequires:	automake
-Obsoletes:	libelf0
+Obsoletes:	libelf0 < 0.8.13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -80,7 +80,7 @@ Summary(ru.UTF-8):	Файлы для разработки с использов�
 Summary(uk.UTF-8):	Файли для розробки з використанням бібліотеки libelf
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Obsoletes:	libelf0-devel
+Obsoletes:	libelf0-devel < 0.8.13
 
 %description devel
 Development files for libelf.
