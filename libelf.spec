@@ -118,7 +118,7 @@ Statyczna biblioteka libelf.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 install -m755 /usr/share/automake/config.{sub,guess} .
